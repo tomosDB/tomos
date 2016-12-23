@@ -20,33 +20,36 @@ Tomos can be used in any of your DApps to replace a traditional backend database
 ## Getting Started for Beginners
 Tomos's contract works as all typical Ethereum smart contracts do, but if you're getting started the easiest way is to use Truffle with TestRPC. Here are the steps to follow:
 * Install Truffle ( http://truffleframework.com/ )
-  * npm install -g truffle
+  * `npm install -g truffle`
 * Install TestRPC ( https://github.com/ethereumjs/testrpc )
-  * npm install -g ethereumjs-testrpc
+  * `npm install -g ethereumjs-testrpc`
 * Create and Deploy Tomos contract
   * Initiate a new Truffle project ( http://truffleframework.com/docs/getting_started/project )
-    * mkdir myproject
-    * cd myproject
-    * truffle init
+    * `mkdir myproject`
+    * `cd myproject`
+    * `truffle init`
   * Download Tomos
   * Include Tomos in Truffle contract directory
   * Edit migrations
     * In file myproject -> migrations -> 2_deploy_contracts.js
     * Replace test contracts with the following code:
-      * module.exports = function(deployer) {
-        deployer.deploy(Migrations);
-      };
+    ```javascript 
+    module.exports = function(deployer) {
+      deployer.deploy(Migrations);
+    };
+    ```
+      
   * Compile all contracts
-    * truffle compile
+    * `truffle compile`
   * Start the TestRPC server
-    * In the command line type "testrpc"
+    * In the command line type `testrpc`
   * Deploy contracts to TestRPC
-    * Type "truffle migrate" in the console
+    * Type `truffle migrate` in the console
 * Create and Build Client-Side DApp
   * Go to app -> javascripts -> app.js
   * Add in any Tomos functionality using Truffle's interface and Tomos' API
   * Build the DApp
-    * Type "truffle build" in the console
+    * Type `truffle build` in the console
   * Open the index.html file in your browser and enjoy Tomos!
 
 ## Tomos API Reference
@@ -94,4 +97,5 @@ Tomos's contract works as all typical Ethereum smart contracts do, but if you're
    * @return Matched rows.
    
 ## Example App
-We have a simple example DApp to get you started using Truffle and the Web3.js library.
+We have a simple example DApp to get you started using Truffle and the Web3.js library at:
+https://github.com/tomosDB/tomos_demo
